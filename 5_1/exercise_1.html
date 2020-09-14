@@ -51,6 +51,15 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+        changeInnerText('p', 1, 'Estou usando a função para alterar o segundo paragrafo');
+
+        function changeInnerText(tag, tag_index, text) {
+            document.getElementsByTagName(tag)[tag_index].innerText = text;
+        }
+
+
+
+        
     </script>
   </body>
 </html>
