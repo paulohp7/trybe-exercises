@@ -52,6 +52,11 @@
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
         changeInnerText('p', 1, 'Estou usando a função para alterar o segundo paragrafo');
+        changeColorClass('main-content', 0, 'rgb(76,164,109)');
+
+        function changeColorClass(className, class_index, color) {
+            document.getElementsByClassName(className)[class_index].style.backgroundColor = color;
+        }
 
         function changeInnerText(tag, tag_index, text) {
             document.getElementsByTagName(tag)[tag_index].innerText = text;
