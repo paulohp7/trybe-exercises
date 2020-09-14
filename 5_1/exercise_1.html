@@ -53,6 +53,22 @@
         */
         changeInnerText('p', 1, 'Estou usando a função para alterar o segundo paragrafo');
         changeColorClass('main-content', 0, 'rgb(76,164,109)');
+        changeColorClass('center-content', 0, 'white');
+        changeInnerText('h1', 0, 'Exercício 5.1 - JavaScript');
+        setUpperCase('p', 0);
+        showContentTag('p');
+
+        function showContentTag(tag) {
+            let tagLength = document.getElementsByTagName(tag).length;
+            for (let i = 0; i < tagLength; i += 1) {
+                console.log(document.getElementsByTagName(tag)[i].innerText);
+            }
+
+        }
+        function setUpperCase(tag, tag_index) {
+            let text = document.getElementsByTagName(tag)[tag_index].innerText;
+            document.getElementsByTagName(tag)[tag_index].innerText = text.toUpperCase();
+        }
 
         function changeColorClass(className, class_index, color) {
             document.getElementsByClassName(className)[class_index].style.backgroundColor = color;
