@@ -56,6 +56,7 @@
     </style>
   </head>
   <body>
+    <!--<img src='https://picsum.photos/200' class='small-image'>-->
     <script>
     //Exercise 1
         let header_1 = document.createElement('h1');
@@ -86,6 +87,12 @@
         let div_4 = document.createElement('div');
         div_4.className = 'right-content';
         document.querySelector('.main-content').appendChild(div_4);
+
+    //Exercise 7
+        var img_1 = document.createElement('img');
+        img_1.className = 'small-image';
+        img_1.src = 'https://picsum.photos/200';
+        document.querySelector('.left-content').appendChild(img_1);
     </script>
   </body>
 </html>
