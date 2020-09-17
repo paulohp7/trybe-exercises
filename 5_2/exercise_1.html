@@ -93,6 +93,18 @@
         img_1.className = 'small-image';
         img_1.src = 'https://picsum.photos/200';
         document.querySelector('.left-content').appendChild(img_1);
+
+    //Exercise 8
+        let unorderedList = document.createElement('ul');
+        document.querySelector('.right-content').appendChild(unorderedList);
+        for (let index = 1; index < 11; index += 1) {
+          let listItem = document.createElement('li');
+          listItem.innerText = index;
+          document.querySelector('ul').appendChild(listItem);
+        }
+
+    //Exercise 9
+        
     </script>
   </body>
 </html>
