@@ -65,7 +65,17 @@
     //Exercise 2
         let div_1 = document.createElement('div');
         div_1.className = 'main-content';
-        document.body.appendChild(div_1);    
+        document.body.appendChild(div_1);
+        
+    //Exercise 3
+        let div_2 = document.createElement('div');
+        div_2.className = 'center-content';
+        document.querySelector('.main-content').appendChild(div_2);
+
+    //Exercise 4
+        let p_1 = document.createElement('p');
+        p_1.innerText = 'Hello HTML. I am the fist paragraph.';
+        document.querySelector('.center-content').appendChild(p_1);
     </script>
   </body>
 </html>
