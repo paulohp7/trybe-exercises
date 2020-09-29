@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!--<img src='https://picsum.photos/200' class='small-image'>-->
+    <script>
+    //Exercise 1.1
+        let header_1 = document.createElement('h1');
+        header_1.innerText = 'Exercício 5.2 - Javascript DOM';
+        document.body.appendChild(header_1);
+
+    //Exercise 1.2
+        let div_1 = document.createElement('div');
+        div_1.className = 'main-content';
+        document.body.appendChild(div_1);
+        
+    //Exercise 1.3
+        let div_2 = document.createElement('div');
+        div_2.className = 'center-content';
+        document.querySelector('.main-content').appendChild(div_2);
+
+    //Exercise 1.4
+        let p_1 = document.createElement('p');
+        p_1.innerText = 'Hello HTML. I am the fist paragraph.';
+        document.querySelector('.center-content').appendChild(p_1);
+
+    //Exercise 1.5
+        let div_3 = document.createElement('div');
+        div_3.className = 'left-content';
+        div_3.innerText = 'Hello HTML. I am the third div.'
+        document.querySelector('.main-content').appendChild(div_3);
+
+    //Exercise 1.6
+        let div_4 = document.createElement('div');
+        div_4.className = 'right-content';
+        document.querySelector('.main-content').appendChild(div_4);
+
+    //Exercise 1.7
+        var img_1 = document.createElement('img');
+        img_1.className = 'small-image';
+        img_1.src = 'https://picsum.photos/200';
+        document.querySelector('.left-content').appendChild(img_1);
+
+    //Exercise 1.8
+        let unorderedList = document.createElement('ul');
+        document.querySelector('.right-content').appendChild(unorderedList);
+        for (let index = 1; index < 11; index += 1) {
+          let listItem = document.createElement('li');
+          listItem.innerText = index;
+          document.querySelector('ul').appendChild(listItem);
+        }
+
+    //Exercise 1.9
+        let header_2 = document.createElement('h3');
+        header_2.innerText = 'Olá sou o h3.1';
+        document.querySelector('.main-content').appendChild(header_2);
+        let header_3 = document.createElement('h3');
+        header_3.innerText = 'Olá sou o h3.3';
+        document.querySelector('.main-content').appendChild(header_3);
+        let header_4 = document.createElement('h3');
+        header_4.innerText = 'Olá sou o h3.4';
+        document.querySelector('.main-content').appendChild(header_4);
+
+    //Exercise 2.1
+        header_1.className = 'title';
+
+    //Exercise 2.2
+        header_2.className = 'description';
+        header_3.className = 'description';
+        header_4.className = 'description';
+
+    //Exercise 2.3
+        let targer_div = document.querySelector('.main-content');
+        targer_div.removeChild(targer_div.childNodes[1]);
+
+    //Exercise 2.4
+        document.querySelector('.right-content').style.marginRight = 'auto';
+
+    //Exercise 2.5
+        document.querySelector('.center-content').parentElement.style.backgroundColor = 'green';
+
+    //Exercise 2.6
+        let target_list = document.querySelector('ul');
+        target_list.removeChild(target_list.lastElementChild);
+        target_list.removeChild(target_list.lastElementChild);
+    </script>
+  </body>
+</html>
